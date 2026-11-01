@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRP AI Game Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- 3D Dice Box için Import Map -->
+<script type="importmap">
+        {
+            "imports": {
+                "@3d-dice/dice-box": "/dice-box.es.min.js"
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-100 h-screen flex flex-col font-sans overflow-hidden relative">
+
+    <div id="scene-background" class="fixed inset-0 z-[-1] bg-cover bg-center transition-all duration-1000"></div>
+
+    <!-- Mevcut kodların (Chat kutusu, Zar alanı vb.) burada kalmaya devam edecek -->
+    <div id="chat-container">...</div>
+    <!-- 3D Zar Render Katmanı -->
+    <div id="dice-box" class="absolute inset-0 pointer-events-none z-50"></div>
+
+    <header class="bg-gray-800 p-4 shadow-md z-10 border-b border-gray-700">
+        <h1 class="text-2xl font-bold text-center text-indigo-400">FRP AI Game Master</h1>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-4 flex flex-col gap-4 w-full max-w-4xl mx-auto" id="chat-container">
+        <div class="text-center text-sm text-gray-500 mt-4">Sisteme bağlanılıyor...</div>
+    </main>
+
+    <footer class="bg-gray-800 p-4 shadow-inner z-10 border-t border-gray-700">
+        <div class="max-w-4xl mx-auto flex gap-2">
+            <input type="text" id="chat-input" class="flex-1 bg-gray-700 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Aksiyon yaz veya /roll 1d20..." autocomplete="off">
+            <button id="send-btn" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg font-semibold transition-colors">Gönder</button>
+        </div>
+    </footer>
+
+    <script src="/audio.js"></script>
+    <script type="module" src="/app.js"></script>
+</body>
+</body>
+</html>

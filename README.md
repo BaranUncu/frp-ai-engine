@@ -27,3 +27,5 @@ Projeyi yerel ortamınızda ayağa kaldırmak için:
    ```bash
    git clone [https://github.com/kullaniciadiniz/frp-ai-engine.git](https://github.com/kullaniciadiniz/frp-ai-engine.git)
    cd frp-ai-engine
+- [x] **Beta (v0.2.0):** Yerel LLM entegrasyonu (LM Studio/Qwen) ile asenkron streaming bağlantısı ve Web Speech API ile mikrofon (Speech-to-Text) desteği eklendi. (Tamamlandı)
+- [ ] **v1.0.0:** Tam teşekküllü çok oyunculu (multiplayer) yapı, WebRTC sesli iletişim ve bulut sunucu (VPS) yayını.
